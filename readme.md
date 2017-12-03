@@ -6,10 +6,11 @@ Go to terminal
 
 ```
 $ npm install
+$ npm install -g browser-sync
 $ browser-sync start --server --files "css/*.css"
 ```
 
-On terminal
+On terminal (This is an example. please check URLS on your terminal)
 
 ```
 [Browsersync] Access URLs:
@@ -22,7 +23,8 @@ On terminal
  -------------------------------------
 ```
 
-Testing on Desktop: Go to Local Testing on Mobile: Go to External
+* Testing on Desktop: Go to Local
+* Testing on Mobile: Go to External
 
 ### Development Environment Features
 
