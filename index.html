@@ -3,19 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Happy game</title>
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <div class="flex-row reels-container">
+    <div class="reels-container flex-row">
       <div class="flex-item reel">
         <img src="img/green.png" alt="green">
       </div>
@@ -67,7 +67,6 @@
         <span class="close-btn">&times;</span>
         <span>This is a pop over</span>
       </div>
-      <img src="img/keypanel.png" alt="keypanel">
     </div>
   </div>
   <audio src="sounds/smb_flagpole.wav"></audio>
@@ -107,6 +106,7 @@
   }
 
   function showPopover() {
+    closeSlider()
     popOver.classList.add('open')
   }
 
@@ -115,6 +115,7 @@
   }
 
   function showSlider() {
+    closePopover()
     slider.classList.add('open')
   }
 
@@ -128,7 +129,7 @@
   cButton.addEventListener('click', showSlider)
 
   $(function () {
-    $("#slider").slider({
+    $('#slider').slider({
       min: 0,
       max: 100,
       value: 0,

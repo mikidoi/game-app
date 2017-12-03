@@ -1,0 +1,22 @@
+{
+  "name": "game-app",
+  "version": "1.0.0",
+  "description": "Game app",
+  "main": "readme.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikidoi/game-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikidoi/game-app/issues"
+  },
+  "homepage": "https://github.com/mikidoi/game-app#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}
