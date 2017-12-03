@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Happy game</title>
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex-row reels-container">
+      <div class="flex-item reel">
+        <img src="img/green.png" alt="green">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/yellow.png" alt="yellow">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/big-red.png" alt="big-red">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/green.png" alt="green">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/big-yellow.png" alt="big-yellow">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/yellow.png" alt="yellow">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/pink.png" alt="pink">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/diamond.png" alt="diamond">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/blue.png" alt="blue">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/yellow.png" alt="yellow">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/pink.png" alt="pink">
+      </div>
+      <div class="flex-item reel">
+        <img src="img/dark-blue.png" alt="dark-blue">
+      </div>
+    </div>
+
+    <div class="panel-container flex-row">
+      <button class="c-btn">C</button>
+      <div class="slider-container">
+        <span class="fa fa-volume-down"></span>
+        <div id="slider"></div>
+        <span class="fa fa-volume-up"></span>
+      </div>
+      <button class="a-btn">A</button>
+      <button class="b-btn">B</button>
+      <div class="pop-over">
+        <span class="close-btn">&times;</span>
+        <span>This is a pop over</span>
+      </div>
+      <img src="img/keypanel.png" alt="keypanel">
+    </div>
+  </div>
+  <audio src="sounds/smb_flagpole.wav"></audio>
+</body>
+<script>
+  const aButton = document.querySelector('.a-btn')
+  const bButton = document.querySelector('.b-btn')
+  const cButton = document.querySelector('.c-btn')
+
+  const reelsContainer = document.querySelector('.reels-container')
+  const popOver = document.querySelector('.pop-over')
+  const closeButton = document.querySelector('.close-btn')
+  const slider = document.querySelector('.slider-container')
+  const sliderHandle = document.querySelector('#slider .ui-slider-handle')
+
+  const audio = document.querySelector('audio')
+
+
+  function reShuffle() {
+    let reels = document.querySelectorAll('.reel')
+    let symbols = [...reels]
+    audio.play()
+
+    for (let i = symbols.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = symbols[i];
+      symbols[i] = symbols[j];
+      symbols[j] = temp;
+      result = [...symbols]
+    }
+
+    symbols.forEach(function (symbol, index) {
+      setTimeout(function () {
+        reelsContainer.appendChild(symbol)
+      }, 100 * index)
+    })
+  }
+
+  function showPopover() {
+    popOver.classList.add('open')
+  }
+
+  function closePopover() {
+    popOver.classList.remove('open')
+  }
+
+  function showSlider() {
+    slider.classList.add('open')
+  }
+
+  function closeSlider() {
+    slider.classList.remove('open')
+  }
+
+  aButton.addEventListener('click', reShuffle)
+  bButton.addEventListener('click', showPopover)
+  closeButton.addEventListener('click', closePopover)
+  cButton.addEventListener('click', showSlider)
+
+  $(function () {
+    $("#slider").slider({
+      min: 0,
+      max: 100,
+      value: 0,
+      range: "min",
+      change: closeSlider
+    })
+  })
+
+</script>
+
+</html>
