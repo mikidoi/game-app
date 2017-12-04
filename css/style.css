@@ -195,8 +195,8 @@ span.close-btn {
 .slider-container {
   display: none;
   position: absolute;
-  height: 250px;
-  width: 25px;
+  height: 15.6rem;
+  width: 1.56rem;
   top: 5%;
   bottom: 0;
   left: 3%;
@@ -216,16 +216,16 @@ span.close-btn {
   color: white;
 }
 
-.slider-container .fa-volume-down {
-  left: 75%;
-  bottom: 0;
-  margin-bottom: -14px;
-}
-
 .slider-container .fa-volume-up {
   margin-top: -14px;
   margin-right: -8px;
   right: 0;
+}
+
+.slider-container .fa-volume-down {
+  left: 75%;
+  bottom: 0;
+  margin-bottom: -14px;
 }
 
 #slider {
@@ -234,14 +234,14 @@ span.close-btn {
   background: linear-gradient(to top, #f5e571, #2ecc71);
   background: -webkit-linear-gradient(to top, #f5e571, #2ecc71);
   border-radius: 15px;
-  height: 200px;
+  height: 12.5rem;
   width: 5px;
   left: 25px;
   margin: 25px auto;
 }
 
 #slider .ui-slider-range-max {
-  height: 174px;
+  height: 12.5rem;
   width: 5px;
   position: absolute;
   background: gray;
@@ -290,7 +290,18 @@ span.close-btn {
   }
 
   .slider-container {
-    top: 0;
+    top: 22%;
+    margin-top: 0;
+    left: 0.5%;
+  }
+
+  .slider-container .fa-volume-up {
+    margin-right: -18px;
+  }
+
+  .slider-container .fa-volume-down {
+    left: 137%;
+    margin-bottom: -35px;
   }
 
   span.close-btn {
