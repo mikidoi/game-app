@@ -45,16 +45,22 @@ img {
   outline: 0;
 }
 
+.b-btn:hover,
+.c-btn:hover {
+  transform: scale(1.1);
+}
+
 .a-btn,
 .b-btn,
 .c-btn {
+  color: white;
   position: absolute;
   bottom: 0;
   margin: auto;
   display: block;
   cursor: pointer;
   font-size: 1.87rem;
-  border: 0.06rem solid white;
+  border: 2px solid white;
 }
 
 .b-btn,
@@ -70,6 +76,12 @@ img {
   height: 12.5rem;
   width: 12.5rem;
   border-radius: 12.5rem;
+}
+
+.a-btn:hover {
+  transform: scale(0.8);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
 
 .b-btn {
@@ -102,10 +114,12 @@ img {
   bottom: 0;
   left: 0;
   margin: auto;
-  background-color: #ec6eb6;
+  background: #ec6eb6;
+  background: linear-gradient(to top, #72174b, #ec6eb6);
+  background: -webkit-linear-gradient(to top, #72174b, #ec6eb6);
   height: 30px;
   width: 120px;
-  padding: 1rem;
+  padding: 1.2rem 0.8rem;
   text-transform: uppercase;
   border-radius: 8px;
   border: 2px solid white;
@@ -210,7 +224,7 @@ span.close-btn {
   height: 5px;
   width: 200px;
   position: absolute;
-  background: #2ecc71;
+  background: #f5e571;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -220,7 +234,7 @@ span.close-btn {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: white;
+  background: #2ecc71;
   position: absolute;
   margin-left: -8px;
   margin-top: -8px;
