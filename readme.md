@@ -5,7 +5,6 @@
 Go to terminal
 
 ```
-$ npm install
 $ npm install -g browser-sync
 $ browser-sync start --server
 ```
