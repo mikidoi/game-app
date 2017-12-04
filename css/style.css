@@ -21,6 +21,11 @@ body {
   margin: auto;
 }
 
+.reels-container {
+  background-color: #140100;
+  height: 306px;
+}
+
 .reels-container .flex-item {
   width: 25%;
 }
@@ -95,6 +100,11 @@ img {
   border-radius: 3.75rem;
 }
 
+.b-btn:hover {
+  border-color: #ac347a;
+  box-shadow: 0 0 1rem #ac347a;
+}
+
 .c-btn {
   top: -50%;
   margin-left: 0;
@@ -104,6 +114,11 @@ img {
   height: 3.75rem;
   width: 3.75rem;
   border-radius: 3.75rem;
+}
+
+.c-btn:hover {
+  border-color: #215c3a;
+  box-shadow: 0 0 1rem #215c3a;
 }
 
 .pop-over {
@@ -180,15 +195,16 @@ span.close-btn {
 .slider-container {
   display: none;
   position: absolute;
-  width: 250px;
-  height: 25px;
-  top: 60%;
+  height: 250px;
+  width: 25px;
+  top: 5%;
   bottom: 0;
-  left: 0;
+  left: 3%;
   right: 0;
   margin: auto;
   z-index: 10;
   padding-top: 15px;
+  margin-left: 0;
 }
 
 .slider-container.open {
@@ -197,34 +213,38 @@ span.close-btn {
 
 .slider-container .fa {
   position: absolute;
-  margin-top: -6px;
   color: white;
 }
 
 .slider-container .fa-volume-down {
-  margin-left: -8px;
+  left: 75%;
+  bottom: 0;
+  margin-bottom: -14px;
 }
 
 .slider-container .fa-volume-up {
+  margin-top: -14px;
   margin-right: -8px;
   right: 0;
 }
 
 #slider {
   position: absolute;
-  background: gray;
+  background: #f5e571;
+  background: linear-gradient(to top, #f5e571, #2ecc71);
+  background: -webkit-linear-gradient(to top, #f5e571, #2ecc71);
   border-radius: 15px;
-  width: 200px;
-  height: 5px;
+  height: 200px;
+  width: 5px;
   left: 25px;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
-#slider .ui-slider-range-min {
-  height: 5px;
-  width: 200px;
+#slider .ui-slider-range-max {
+  height: 174px;
+  width: 5px;
   position: absolute;
-  background: #f5e571;
+  background: gray;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -233,11 +253,13 @@ span.close-btn {
 #slider .ui-slider-handle {
   width: 20px;
   height: 20px;
+  border: 3px solid white;
   border-radius: 20px;
   background: #2ecc71;
   position: absolute;
-  margin-left: -8px;
-  margin-top: -8px;
+  margin-top: auto;
+  margin-bottom: -200%;
+  margin-left: -11px;
   cursor: pointer;
   outline: none;
 }

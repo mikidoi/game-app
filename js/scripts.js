@@ -59,10 +59,11 @@ cButton.addEventListener('click', showSlider)
 
 $(() => {
   $('#slider').slider({
+    orientation: 'vertical',
     min: 0,
     max: 100,
     value: 0,
-    range: 'min',
+    range: 'max',
     slide: (event, ui) => {
       setVolume(ui.value / 100)
     },
