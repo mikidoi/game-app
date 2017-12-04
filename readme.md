@@ -7,7 +7,7 @@ Go to terminal
 ```
 $ npm install
 $ npm install -g browser-sync
-$ browser-sync start --server --files "css/*.css"
+$ browser-sync start --server
 ```
 
 On terminal (This is an example. please check URLs on your terminal)

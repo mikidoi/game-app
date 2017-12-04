@@ -23,8 +23,8 @@ function reShuffle() {
     result = [...symbols]
   }
 
-  symbols.forEach(function(symbol, index) {
-    setTimeout(function() {
+  symbols.forEach((symbol, index) => {
+    setTimeout(() => {
       reelsContainer.appendChild(symbol)
     }, 100 * index)
   })
@@ -48,17 +48,24 @@ function closeSlider() {
   slider.classList.remove('open')
 }
 
+function setVolume(myVolume) {
+  audio.volume = myVolume
+}
+
 aButton.addEventListener('click', reShuffle)
 bButton.addEventListener('click', showPopover)
 closeButton.addEventListener('click', closePopover)
 cButton.addEventListener('click', showSlider)
 
-$(function() {
+$(() => {
   $('#slider').slider({
     min: 0,
     max: 100,
     value: 0,
     range: 'min',
+    slide: (event, ui) => {
+      setVolume(ui.value / 100)
+    },
     change: closeSlider
   })
 })

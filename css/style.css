@@ -66,7 +66,7 @@ img {
   top: -20%;
   right: 0;
   left: 0;
-  background-color: brown;
+  background-color: #ff9800;
   height: 12.5rem;
   width: 12.5rem;
   border-radius: 12.5rem;
@@ -74,9 +74,10 @@ img {
 
 .b-btn {
   top: 22%;
-  right: 25%;
-  left: 0;
-  background-color: brown;
+  margin-left: 0;
+  right: 0;
+  left: 32%;
+  background-color: #ec6eb6;
   height: 3.75rem;
   width: 3.75rem;
   border-radius: 3.75rem;
@@ -84,9 +85,10 @@ img {
 
 .c-btn {
   top: -50%;
+  margin-left: 0;
   right: 0;
-  left: -83%;
-  background-color: brown;
+  left: 3%;
+  background-color: #2ecc71;
   height: 3.75rem;
   width: 3.75rem;
   border-radius: 3.75rem;
@@ -95,15 +97,15 @@ img {
 .pop-over {
   display: none;
   position: absolute;
-  top: 42%;
+  top: 44%;
   right: 25%;
   bottom: 0;
   left: 0;
   margin: auto;
-  background-color: brown;
+  background-color: #ec6eb6;
   height: 30px;
   width: 120px;
-  padding: 15px;
+  padding: 1rem;
   text-transform: uppercase;
   border-radius: 8px;
   border: 2px solid white;
@@ -136,10 +138,10 @@ img {
 }
 
 .pop-over::after {
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-bottom: 14px solid brown;
-  border-top: 14px solid transparent;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid #ec6eb6;
+  border-top: 13px solid transparent;
 }
 
 .pop-over span {
@@ -152,7 +154,7 @@ span.close-btn {
   position: absolute;
   right: 10px;
   top: 10px;
-  color: brown;
+  color: #ec6eb6;
   background-color: white;
   width: 15px;
   height: 15px;
@@ -241,7 +243,6 @@ span.close-btn {
 
   .b-btn {
     top: -20%;
-    right: 25%;
   }
 
   .c-btn {
