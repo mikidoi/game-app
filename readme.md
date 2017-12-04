@@ -23,8 +23,8 @@ On terminal (This is an example. please check URLs on your terminal)
  -------------------------------------
 ```
 
-* Testing on Desktop: Go to Local
-* Testing on Mobile: Go to External
+* Testing on Desktop: Go to "Local" URL
+* Testing on Mobile: Go to "External" URL
 
 ### Development Environment Features
 
