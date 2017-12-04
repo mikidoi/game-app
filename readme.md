@@ -10,7 +10,7 @@ $ npm install -g browser-sync
 $ browser-sync start --server --files "css/*.css"
 ```
 
-On terminal (This is an example. please check URLS on your terminal)
+On terminal (This is an example. please check URLs on your terminal)
 
 ```
 [Browsersync] Access URLs:
